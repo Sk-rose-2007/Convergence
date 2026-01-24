@@ -25,9 +25,9 @@ export default function AboutSection() {
     <SectionWrapper id="about" className="bg-card">
       <div className="grid gap-8">
         <div className="space-y-4">
-          <SectionTitle>About CONVERGENCE</SectionTitle>
+          <SectionTitle>About THIRAN</SectionTitle>
           <SectionDescription>
-            CONVERGENCE is the premier annual technical symposium of our institution, dedicated to celebrating technology, creativity, and collaborative spirit. Our mission is to provide an exceptional platform for budding engineers and tech enthusiasts to showcase their talents, share knowledge, and connect with peers and industry experts.
+            Thiran is an intra-departmental technical symposium orchestrated by the Computer Science and Engineering department. It serves as a vibrant platform for students to showcase their technical expertise and innovative ideas.
           </SectionDescription>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -13,9 +13,9 @@ export default function CoordinatorsSection() {
   return (
     <SectionWrapper id="coordinators" className="bg-card">
       <div className="space-y-4">
-        <SectionTitle>Meet the Team</SectionTitle>
+        <SectionTitle>Our Student Coordinators</SectionTitle>
         <SectionDescription>
-          Our dedicated team of student coordinators working tirelessly to make CONVERGENCE a grand success.
+          Meet the dedicated student coordinators of THIRAN 2k24.
         </SectionDescription>
       </div>
       <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

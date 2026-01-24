@@ -53,7 +53,7 @@ export default function RegistrationSection() {
     console.log(values);
     toast({
         title: "Registration Submitted!",
-        description: "We've received your registration for CONVERGENCE. See you there!",
+        description: "We've received your registration for THIRAN 2k24. See you there!",
     })
     form.reset();
   }
@@ -61,15 +61,15 @@ export default function RegistrationSection() {
   return (
     <SectionWrapper id="register">
       <div className="space-y-4">
-        <SectionTitle>Register Now</SectionTitle>
+        <SectionTitle>Register for THIRAN</SectionTitle>
         <SectionDescription>
-          Secure your spot at CONVERGENCE! Fill out the form below to register for the events.
+          Secure your spot at THIRAN 2k24! Fill out the form below to register for the events.
         </SectionDescription>
       </div>
       <div className="mt-12 flex justify-center">
         <Card className="w-full max-w-2xl bg-card">
           <CardHeader>
-            <CardTitle className="font-headline">Registration Form</CardTitle>
+            <CardTitle className="font-headline">THIRAN 2k24 Registration</CardTitle>
           </CardHeader>
           <CardContent>
             <Form {...form}>
