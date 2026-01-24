@@ -42,11 +42,11 @@ export default function CoordinatorsSection() {
                   <div className="mt-4 space-y-2 text-sm text-muted-foreground">
                       <div className="flex items-center justify-center gap-2">
                           <Phone className="h-4 w-4" />
-                          <span>{coordinator.phone}</span>
+                          <span className="break-all">{coordinator.phone}</span>
                       </div>
                       <div className="flex items-center justify-center gap-2">
                           <Mail className="h-4 w-4" />
-                          <span>{coordinator.email}</span>
+                          <span className="break-all">{coordinator.email}</span>
                       </div>
                   </div>
                 </CardContent>

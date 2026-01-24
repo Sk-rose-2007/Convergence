@@ -99,11 +99,11 @@ export default function EventDetails({ event }: EventDetailsProps) {
                              <div className="mt-2 space-y-1 text-xs text-muted-foreground">
                                 <div className="flex items-center gap-2">
                                     <Phone className="h-3 w-3" />
-                                    <span>{coordinator.phone}</span>
+                                    <span className="break-all">{coordinator.phone}</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Mail className="h-3 w-3" />
-                                    <span>{coordinator.email}</span>
+                                    <span className="break-all">{coordinator.email}</span>
                                 </div>
                             </div>
                           </div>
