@@ -81,7 +81,7 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
-              <div className="flex flex-col h-full">
+              <div className="flex flex-col h-full -mx-6 -my-6">
                 <div className="flex justify-between items-center p-4 border-b">
                     <span className="text-lg font-bold font-headline">Menu</span>
                     <SheetClose asChild>
