@@ -16,7 +16,7 @@ type EventCardProps = {
 
 export default function EventCard({ icon: Icon, title, description, rules }: EventCardProps) {
   return (
-    <Card className="flex flex-col h-full bg-card/50 hover:border-primary/50 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10">
+    <Card className="flex flex-col h-full bg-card/50 hover:border-primary/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-primary/10">
       <CardHeader className="flex flex-row items-center gap-4 space-y-0 pb-4">
         <div className="rounded-lg bg-primary/10 p-3">
           <Icon className="h-6 w-6 text-primary" />

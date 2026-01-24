@@ -12,44 +12,46 @@ export default function CoordinatorsSection() {
 
   return (
     <SectionWrapper id="coordinators" className="bg-card">
-      <div className="space-y-4">
+      <div className="space-y-4 animate-fade-in-up" style={{ animationFillMode: 'backwards' }}>
         <SectionTitle>Our Student Coordinators</SectionTitle>
         <SectionDescription>
           Meet the dedicated student coordinators of CONVERGENCE 2k24.
         </SectionDescription>
       </div>
       <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        {coordinators.map((coordinator) => {
+        {coordinators.map((coordinator, index) => {
           const placeholder = getImage(coordinator.id);
           return (
-            <Card key={coordinator.name} className="overflow-hidden text-center bg-background/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-2">
-              <CardContent className="p-6">
-                <div className="mb-4">
-                    {placeholder && (
-                        <Image
-                            src={placeholder.imageUrl}
-                            alt={`Photo of ${coordinator.name}`}
-                            width={100}
-                            height={100}
-                            data-ai-hint={placeholder.imageHint}
-                            className="w-24 h-24 rounded-full mx-auto object-cover border-2 border-primary"
-                        />
-                    )}
-                </div>
-                <h3 className="text-lg font-bold font-headline">{coordinator.name}</h3>
-                <p className="text-sm text-primary">{coordinator.role}</p>
-                <div className="mt-4 space-y-2 text-sm text-muted-foreground">
-                    <div className="flex items-center justify-center gap-2">
-                        <Phone className="h-4 w-4" />
-                        <span>{coordinator.phone}</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <Mail className="h-4 w-4" />
-                        <span>{coordinator.email}</span>
-                    </div>
-                </div>
-              </CardContent>
-            </Card>
+            <div key={coordinator.name} className="animate-fade-in-up" style={{ animationDelay: `${0.1 * (index + 1)}s`, animationFillMode: 'backwards' }}>
+              <Card className="overflow-hidden text-center bg-background/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:scale-105">
+                <CardContent className="p-6">
+                  <div className="mb-4">
+                      {placeholder && (
+                          <Image
+                              src={placeholder.imageUrl}
+                              alt={`Photo of ${coordinator.name}`}
+                              width={100}
+                              height={100}
+                              data-ai-hint={placeholder.imageHint}
+                              className="w-24 h-24 rounded-full mx-auto object-cover border-2 border-primary"
+                          />
+                      )}
+                  </div>
+                  <h3 className="text-lg font-bold font-headline">{coordinator.name}</h3>
+                  <p className="text-sm text-primary">{coordinator.role}</p>
+                  <div className="mt-4 space-y-2 text-sm text-muted-foreground">
+                      <div className="flex items-center justify-center gap-2">
+                          <Phone className="h-4 w-4" />
+                          <span>{coordinator.phone}</span>
+                      </div>
+                      <div className="flex items-center justify-center gap-2">
+                          <Mail className="h-4 w-4" />
+                          <span>{coordinator.email}</span>
+                      </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           );
         })}
       </div>

@@ -60,7 +60,7 @@ export default function RegistrationSection() {
 
   return (
     <SectionWrapper id="register">
-      <div className="space-y-4">
+      <div className="space-y-4 animate-fade-in-up" style={{ animationFillMode: 'backwards' }}>
         <SectionTitle>Register for CONVERGENCE</SectionTitle>
         <SectionDescription>
           Secure your spot at CONVERGENCE 2k24! Fill out the form below to register for the events.
