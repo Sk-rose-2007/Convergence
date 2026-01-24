@@ -50,7 +50,7 @@ export default function Header() {
     <header
       className={cn(
         'sticky top-0 z-50 flex h-20 items-center transition-all duration-300',
-        hasScrolled ? 'bg-background/80 backdrop-blur-sm border-b' : 'bg-transparent'
+        hasScrolled ? 'bg-background/70 backdrop-blur-lg border-b border-border/20' : 'bg-transparent'
       )}
     >
       <div className="container mx-auto flex items-center justify-between px-4 md:px-6">

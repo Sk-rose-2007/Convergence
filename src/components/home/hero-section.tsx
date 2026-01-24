@@ -7,10 +7,10 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="relative flex h-[calc(100vh-5rem)] min-h-[600px] w-full items-center justify-center">
-      <div className="absolute inset-0 bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(33,114,229,0.2),rgba(255,255,255,0))]"></div>
+      <div className="absolute inset-0 bg-background bg-[radial-gradient(ellipse_50%_50%_at_50%_-20%,hsl(var(--primary)/0.2),transparent_70%)]"></div>
       <div className="container relative z-10 mx-auto px-4 text-center">
         <div className="animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'backwards'}}>
-          <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-br from-primary to-accent text-gradient">
+          <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] animate-gradient-pan text-gradient">
             CONVERGENCE 2k26
           </h1>
         </div>

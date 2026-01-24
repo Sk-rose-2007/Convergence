@@ -3,7 +3,7 @@ import { socialLinks } from '@/lib/content';
 
 export default function Footer() {
   return (
-    <footer className="bg-card border-t">
+    <footer className="bg-card/50 border-t border-border/20">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row md:px-6">
         <div className="text-center sm:text-left">
             <p className="text-sm font-medium">Nehru Institute of Technology</p>

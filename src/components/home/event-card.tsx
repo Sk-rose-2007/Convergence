@@ -16,7 +16,7 @@ type EventCardProps = {
 
 export default function EventCard({ icon: Icon, title, description, rules }: EventCardProps) {
   return (
-    <Card className="flex flex-col h-full bg-card/50 hover:border-primary/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-primary/10">
+    <Card className="flex flex-col h-full bg-card/30 border border-border/20 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:shadow-primary/20 hover:shadow-2xl hover:-translate-y-2">
       <CardHeader className="flex flex-row items-center gap-4 space-y-0 pb-4">
         <div className="rounded-lg bg-primary/10 p-3">
           <Icon className="h-6 w-6 text-primary" />
@@ -26,7 +26,7 @@ export default function EventCard({ icon: Icon, title, description, rules }: Eve
       <CardContent className="flex-grow flex flex-col">
         <p className="text-muted-foreground flex-grow">{description}</p>
         <Accordion type="single" collapsible className="w-full mt-4">
-          <AccordionItem value="item-1" className="border-t border-b-0 pt-2">
+          <AccordionItem value="item-1" className="border-t border-b-0 pt-2 border-border/20">
             <AccordionTrigger className="py-2 text-sm font-semibold hover:no-underline text-accent hover:text-accent/80">
               View Rules
             </AccordionTrigger>

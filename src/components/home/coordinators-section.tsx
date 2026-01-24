@@ -23,7 +23,7 @@ export default function CoordinatorsSection() {
           const placeholder = getImage(coordinator.id);
           return (
             <div key={coordinator.name} className="animate-fade-in-up" style={{ animationDelay: `${0.1 * (index + 1)}s`, animationFillMode: 'backwards' }}>
-              <Card className="overflow-hidden text-center bg-background/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:scale-105">
+              <Card className="overflow-hidden text-center bg-card/30 border border-border/20 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:shadow-primary/20 hover:shadow-2xl hover:-translate-y-2">
                 <CardContent className="p-6">
                   <div className="mb-4">
                       {placeholder && (
@@ -33,7 +33,7 @@ export default function CoordinatorsSection() {
                               width={100}
                               height={100}
                               data-ai-hint={placeholder.imageHint}
-                              className="w-24 h-24 rounded-full mx-auto object-cover border-2 border-primary"
+                              className="w-24 h-24 rounded-full mx-auto object-cover border-2 border-primary shadow-lg shadow-primary/20"
                           />
                       )}
                   </div>

@@ -67,7 +67,7 @@ export default function RegistrationSection() {
         </SectionDescription>
       </div>
       <div className="mt-12 flex justify-center">
-        <Card className="w-full max-w-2xl bg-card">
+        <Card className="w-full max-w-2xl bg-card/30 border border-border/20 backdrop-blur-sm">
           <CardHeader>
             <CardTitle className="font-headline">CONVERGENCE 2k26 Registration</CardTitle>
           </CardHeader>

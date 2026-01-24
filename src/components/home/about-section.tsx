@@ -22,7 +22,7 @@ const features = [
 
 export default function AboutSection() {
   return (
-    <SectionWrapper id="about" className="bg-card">
+    <SectionWrapper id="about" className="bg-background">
       <div className="grid gap-8">
         <div className="space-y-4 animate-fade-in-up" style={{ animationFillMode: 'backwards' }}>
           <SectionTitle>About CONVERGENCE</SectionTitle>
@@ -33,7 +33,7 @@ export default function AboutSection() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
             <div key={feature.title} className="animate-fade-in-up" style={{ animationDelay: `${0.2 * (index + 1)}s`, animationFillMode: 'backwards' }}>
-              <Card className="bg-background/50 border-border/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/10">
+              <Card className="bg-card/30 border border-border/20 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:shadow-primary/20 hover:shadow-2xl hover:-translate-y-2">
                 <CardContent className="p-6 flex flex-col items-center text-center gap-4">
                   {feature.icon}
                   <h3 className="text-xl font-bold font-headline">{feature.title}</h3>
