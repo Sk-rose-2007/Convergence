@@ -27,7 +27,7 @@ export default function AboutSection() {
         <div className="space-y-4 animate-fade-in-up" style={{ animationFillMode: 'backwards' }}>
           <SectionTitle>About CONVERGENCE</SectionTitle>
           <SectionDescription>
-            Convergence is a national-level technical symposium orchestrated by the Computer Science and Engineering department. It serves as a vibrant platform for students to showcase their technical expertise and innovative ideas.
+            Convergence is a national-level technical symposium orchestrated by the Nehru Institute of Technology. It serves as a vibrant platform for students to showcase their technical expertise and innovative ideas.
           </SectionDescription>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

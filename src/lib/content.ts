@@ -86,21 +86,13 @@ export const nonTechnicalEvents: Event[] = [
 export const schedule = {
   day1: [
     { time: '09:00 AM - 10:00 AM', event: 'Inauguration Ceremony' },
-    { time: '10:00 AM - 01:00 PM', event: 'Code Rush (Starts)' },
-    { time: '10:30 AM - 12:30 PM', event: 'Paper Presentation (Round 1)' },
-    { time: '11:00 AM - 01:00 PM', event: 'Debugging' },
+    { time: '10:00 AM - 12:00 PM', event: 'Paper & Project Presentation' },
+    { time: '10:00 AM - 01:00 PM', event: 'Code Rush & Debugging' },
+    { time: '12:00 PM - 01:00 PM', event: 'Ad Zap & Connexion' },
     { time: '01:00 PM - 02:00 PM', event: 'Lunch Break' },
-    { time: '02:00 PM - 04:00 PM', event: 'Project Presentation' },
-    { time: '02:30 PM - 04:30 PM', event: 'Connexion' },
-  ],
-  day2: [
-    { time: '10:00 AM - 10:00 AM', event: 'Code Rush (Ends)' },
-    { time: '10:30 AM - 12:30 PM', event: 'Web Design' },
-    { time: '11:00 AM - 01:00 PM', event: 'Gaming Finals' },
-    { time: '01:00 PM - 02:00 PM', event: 'Lunch Break' },
-    { time: '02:00 PM - 04:00 PM', event: 'Ad Zap' },
+    { time: '02:00 PM - 04:00 PM', event: 'Web Design & Gaming' },
     { time: '04:30 PM - 05:30 PM', event: 'Valedictory & Prize Distribution' },
-  ],
+  ]
 };
 
 export const coordinators = [

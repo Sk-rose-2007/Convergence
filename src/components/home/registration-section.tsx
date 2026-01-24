@@ -53,7 +53,7 @@ export default function RegistrationSection() {
     console.log(values);
     toast({
         title: "Registration Submitted!",
-        description: "We've received your registration for CONVERGENCE 2k24. See you there!",
+        description: "We've received your registration for CONVERGENCE 2k26. See you there!",
     })
     form.reset();
   }
@@ -63,13 +63,13 @@ export default function RegistrationSection() {
       <div className="space-y-4 animate-fade-in-up" style={{ animationFillMode: 'backwards' }}>
         <SectionTitle>Register for CONVERGENCE</SectionTitle>
         <SectionDescription>
-          Secure your spot at CONVERGENCE 2k24! Fill out the form below to register for the events.
+          Secure your spot at CONVERGENCE 2k26! Fill out the form below to register for the events.
         </SectionDescription>
       </div>
       <div className="mt-12 flex justify-center">
         <Card className="w-full max-w-2xl bg-card">
           <CardHeader>
-            <CardTitle className="font-headline">CONVERGENCE 2k24 Registration</CardTitle>
+            <CardTitle className="font-headline">CONVERGENCE 2k26 Registration</CardTitle>
           </CardHeader>
           <CardContent>
             <Form {...form}>
@@ -95,7 +95,7 @@ export default function RegistrationSection() {
                       <FormItem>
                         <FormLabel>College Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="University of Technology" {...field} />
+                          <Input placeholder="Nehru Institute of Technology" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>

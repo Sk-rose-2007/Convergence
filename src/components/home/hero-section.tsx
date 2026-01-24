@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import CountdownTimer from './countdown-timer';
 
 export default function HeroSection() {
-  const eventDate = new Date('2024-10-26T09:00:00');
+  const eventDate = new Date('2026-02-18T09:00:00');
 
   return (
     <section id="home" className="relative flex h-[calc(100vh-5rem)] min-h-[600px] w-full items-center justify-center">
@@ -11,12 +11,12 @@ export default function HeroSection() {
       <div className="container relative z-10 mx-auto px-4 text-center">
         <div className="animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'backwards'}}>
           <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-br from-primary to-accent text-gradient">
-            CONVERGENCE 2k24
+            CONVERGENCE 2k26
           </h1>
         </div>
         <div className="animate-fade-in-up" style={{ animationDelay: '0.4s', animationFillMode: 'backwards'}}>
           <p className="mx-auto mt-4 max-w-[700px] text-lg text-muted-foreground md:text-xl">
-            A National Level Technical Symposium
+            A National Level Technical Symposium by Nehru Institute of Technology
           </p>
         </div>
         <div className="mt-8 animate-fade-in-up" style={{ animationDelay: '0.6s', animationFillMode: 'backwards'}}>
