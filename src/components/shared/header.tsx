@@ -55,7 +55,7 @@ export default function Header() {
     >
       <div className="container mx-auto flex items-center justify-between px-4 md:px-6">
         <Link href="#home" onClick={(e) => scrollTo('home', e)} className="flex items-center gap-2">
-          <span className="text-xl font-bold font-headline bg-gradient-to-r from-primary to-accent text-gradient">THIRAN</span>
+          <span className="text-xl font-bold font-headline bg-gradient-to-r from-primary to-accent text-gradient">CONVERGENCE</span>
         </Link>
 
         {/* Desktop Navigation */}

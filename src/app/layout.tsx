@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'THIRAN 2k24',
-  description: 'The Intradepartmental Technical Symposium',
+  title: 'CONVERGENCE 2k24',
+  description: 'A National Level Technical Symposium',
 };
 
 export default function RootLayout({

@@ -15,7 +15,7 @@ export default function CoordinatorsSection() {
       <div className="space-y-4">
         <SectionTitle>Our Student Coordinators</SectionTitle>
         <SectionDescription>
-          Meet the dedicated student coordinators of THIRAN 2k24.
+          Meet the dedicated student coordinators of CONVERGENCE 2k24.
         </SectionDescription>
       </div>
       <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

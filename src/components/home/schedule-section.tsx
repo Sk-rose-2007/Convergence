@@ -8,7 +8,7 @@ export default function ScheduleSection() {
       <div className="space-y-4">
         <SectionTitle>Event Schedule</SectionTitle>
         <SectionDescription>
-          Plan your days at THIRAN 2k24. Here’s a timeline of all the events and activities we have lined up for you.
+          Plan your days at CONVERGENCE 2k24. Here’s a timeline of all the events and activities we have lined up for you.
         </SectionDescription>
       </div>
       <div className="mt-12 grid gap-12 lg:grid-cols-2">

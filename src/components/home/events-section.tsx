@@ -9,7 +9,7 @@ export default function EventsSection() {
       <div className="space-y-4 text-center">
         <SectionTitle>Explore Our Events</SectionTitle>
         <SectionDescription>
-          From intense coding battles to creative challenges, we have a diverse range of events for everyone. Choose your arena and get ready to compete at THIRAN 2k24!
+          From intense coding battles to creative challenges, we have a diverse range of events for everyone. Choose your arena and get ready to compete at CONVERGENCE 2k24!
         </SectionDescription>
       </div>
       <div className="mt-12">
