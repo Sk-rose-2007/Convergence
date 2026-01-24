@@ -10,8 +10,9 @@ export const navLinks = [
   { name: 'Coordinators', href: '#coordinators' },
 ];
 
-type Event = {
+export type Event = {
   title: string;
+  slug: string;
   description: string;
   rules: string[];
   icon: LucideIcon;
@@ -20,30 +21,35 @@ type Event = {
 export const technicalEvents: Event[] = [
   {
     title: 'Paper Presentation',
+    slug: 'paper-presentation',
     description: 'Showcase your research and insights on cutting-edge topics.',
     rules: ['Team of 1 or 2 members.', 'Presentation time is 8+2 minutes.', 'Domain: AI, ML, IoT, Cloud, etc.'],
     icon: FileText,
   },
   {
     title: 'Project Presentation',
+    slug: 'project-presentation',
     description: 'Exhibit your innovative projects and working models.',
     rules: ['Team of max 3 members.', 'Abstract submission is mandatory.', 'Hardware or software projects allowed.'],
     icon: Lightbulb,
   },
   {
     title: 'Code Rush',
+    slug: 'code-rush',
     description: 'A coding marathon to solve real-world problems.',
     rules: ['Individual participation.', '2 rounds of coding challenges.', 'Platform: HackerRank.'],
     icon: Laptop,
   },
   {
     title: 'Debugging',
+    slug: 'debugging',
     description: 'Test your algorithmic and problem-solving skills.',
     rules: ['Individual participation.', 'Find and fix bugs in C/C++/Java/Python.', 'Fastest debugger wins.'],
     icon: Bug,
   },
   {
     title: 'Web Design',
+    slug: 'web-design',
     description: 'Find and fix the bugs in the given code snippets.',
     rules: ['Team of 2 members.', 'Create a responsive webpage for a given theme.', 'Duration: 3 hours.'],
     icon: Code,
@@ -53,30 +59,35 @@ export const technicalEvents: Event[] = [
 export const nonTechnicalEvents: Event[] = [
   {
     title: 'Treasure Hunt',
+    slug: 'treasure-hunt',
     description: 'Solve riddles to find the treasure.',
     rules: ['Team of 2.', 'Solve riddles to find the treasure.', 'Campus-wide event.'],
     icon: Search,
   },
   {
     title: 'Ad Zap',
+    slug: 'ad-zap',
     description: 'Create a humorous ad for a given product.',
     rules: ['Team of 2-4 members.', 'Props will be provided.', 'A classic fun event.'],
     icon: Lightbulb,
   },
   {
     title: 'Connexion',
+    slug: 'connexion',
     description: 'Find the connection between images/words.',
     rules: ['Team of 2.', 'Pounce and bounce rules apply.', 'Audience participation is encouraged.'],
     icon: Users,
   },
   {
     title: 'Gaming',
+    slug: 'gaming',
     description: 'Compete in popular esports titles like Valorant and FIFA.',
     rules: ['Solo and team events.', 'Games: BGMI, Free Fire, Valorant.', 'Pre-registration required.'],
     icon: Gamepad2,
   },
   {
     title: 'Photography',
+    slug: 'photography',
     description: 'Capture the essence and moments of CONVERGENCE.',
     rules: ['Individual participation.', 'Theme will be revealed on the day.', 'Mobile and DSLR allowed.'],
     icon: Camera,
