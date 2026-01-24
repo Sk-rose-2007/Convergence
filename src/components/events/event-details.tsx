@@ -57,6 +57,15 @@ export default function EventDetails({ event }: EventDetailsProps) {
           </CardHeader>
           <CardContent className="space-y-8 pt-4">
             <div>
+              <h3 className="text-2xl font-bold font-headline mb-4">About the Event</h3>
+              <div className="space-y-4 text-muted-foreground">
+                {event.detailedDescription.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
+            </div>
+
+            <div>
               <h3 className="text-2xl font-bold font-headline mb-4">Rules & Guidelines</h3>
               <ul className="list-disc space-y-2 pl-5 text-muted-foreground">
                 {event.rules.map((rule, index) => (
