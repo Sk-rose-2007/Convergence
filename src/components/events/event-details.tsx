@@ -2,8 +2,12 @@ import { SectionWrapper } from '@/components/shared/section-wrapper';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowLeft, Phone, Mail } from 'lucide-react';
 import type { Event } from '@/lib/content';
+import { coordinators as allCoordinators } from '@/lib/content';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+import EventRegistrationForm from './event-registration-form';
 
 type EventDetailsProps = {
   event: Event;
@@ -11,6 +15,9 @@ type EventDetailsProps = {
 
 export default function EventDetails({ event }: EventDetailsProps) {
   const Icon = event.icon;
+  const imagePlaceholder = PlaceHolderImages.find(img => img.id === event.imageId);
+  const eventCoordinators = allCoordinators.filter(c => event.coordinators.includes(c.id));
+
   return (
     <SectionWrapper id="event-details" className="py-12 md:py-20">
       <div className="max-w-3xl mx-auto">
@@ -22,7 +29,21 @@ export default function EventDetails({ event }: EventDetailsProps) {
             </Link>
           </Button>
         </div>
-        <Card className="bg-card/30 border border-border/20 backdrop-blur-sm animate-fade-in-up">
+
+        {imagePlaceholder && (
+          <div className="mb-8 rounded-lg overflow-hidden shadow-2xl shadow-primary/20 animate-fade-in-up">
+            <Image
+              src={imagePlaceholder.imageUrl}
+              alt={`Image for ${event.title}`}
+              width={600}
+              height={400}
+              data-ai-hint={imagePlaceholder.imageHint}
+              className="w-full aspect-video object-cover"
+            />
+          </div>
+        )}
+
+        <Card className="bg-card/30 border border-border/20 backdrop-blur-sm animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'backwards'}}>
           <CardHeader>
             <div className="flex items-start gap-4">
               <div className="rounded-lg bg-primary/10 p-3 mt-1.5">
@@ -34,7 +55,7 @@ export default function EventDetails({ event }: EventDetailsProps) {
               </div>
             </div>
           </CardHeader>
-          <CardContent className="space-y-6 pt-4">
+          <CardContent className="space-y-8 pt-4">
             <div>
               <h3 className="text-2xl font-bold font-headline mb-4">Rules & Guidelines</h3>
               <ul className="list-disc space-y-2 pl-5 text-muted-foreground">
@@ -43,8 +64,52 @@ export default function EventDetails({ event }: EventDetailsProps) {
                 ))}
               </ul>
             </div>
+            
+            {eventCoordinators.length > 0 && (
+              <div>
+                <h3 className="text-2xl font-bold font-headline mb-4">Event Coordinators</h3>
+                <div className="grid gap-6 sm:grid-cols-1">
+                  {eventCoordinators.map(coordinator => {
+                    const placeholder = PlaceHolderImages.find(img => img.id === coordinator.id);
+                    return (
+                      <Card key={coordinator.id} className="p-4 bg-card/50 border border-border/30">
+                        <div className="flex items-center gap-4">
+                          {placeholder && (
+                             <Image
+                                src={placeholder.imageUrl}
+                                alt={`Photo of ${coordinator.name}`}
+                                width={64}
+                                height={64}
+                                data-ai-hint={placeholder.imageHint}
+                                className="w-16 h-16 rounded-full object-cover border-2 border-primary"
+                             />
+                          )}
+                          <div className='flex-1'>
+                            <h4 className="font-bold text-lg font-headline">{coordinator.name}</h4>
+                            <p className="text-sm text-primary">{coordinator.role}</p>
+                             <div className="mt-2 space-y-1 text-xs text-muted-foreground">
+                                <div className="flex items-center gap-2">
+                                    <Phone className="h-3 w-3" />
+                                    <span>{coordinator.phone}</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <Mail className="h-3 w-3" />
+                                    <span>{coordinator.email}</span>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </Card>
+                    )
+                  })}
+                </div>
+              </div>
+            )}
           </CardContent>
         </Card>
+
+        <EventRegistrationForm eventName={event.title} />
+
       </div>
     </SectionWrapper>
   );

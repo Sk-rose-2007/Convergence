@@ -24,7 +24,7 @@ export default function HeroSection() {
         </div>
         <div className="mt-8 animate-fade-in-up" style={{ animationDelay: '0.8s', animationFillMode: 'backwards'}}>
           <Button asChild size="lg" className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:scale-105 active:scale-100">
-            <Link href="#register">Register Now</Link>
+            <Link href="#events">Explore Events</Link>
           </Button>
         </div>
       </div>

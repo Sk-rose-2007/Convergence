@@ -63,8 +63,8 @@ export default function Header() {
           {navLinks.map((link) => (
             <NavLink key={link.name} href={link.href}>{link.name}</NavLink>
           ))}
-          <Button asChild size="sm" className="rounded-full" onClick={(e) => scrollTo('register', e as any)}>
-            <Link href="#register">Register Now</Link>
+          <Button asChild size="sm" className="rounded-full" onClick={(e) => scrollTo('events', e as any)}>
+            <Link href="#events">Explore Events</Link>
           </Button>
         </nav>
 
@@ -92,8 +92,8 @@ export default function Header() {
                 </nav>
                 <div className="p-4 border-t">
                     <SheetClose asChild>
-                        <Button asChild className="w-full" onClick={(e) => scrollTo('register', e as any)}>
-                            <Link href="#register">Register Now</Link>
+                        <Button asChild className="w-full" onClick={(e) => scrollTo('events', e as any)}>
+                            <Link href="#events">Explore Events</Link>
                         </Button>
                     </SheetClose>
                 </div>

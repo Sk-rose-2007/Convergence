@@ -21,9 +21,9 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { SectionWrapper, SectionTitle, SectionDescription } from '../shared/section-wrapper';
 import { allEvents } from '@/lib/content';
 import { useToast } from "@/hooks/use-toast"
+import React from 'react';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -34,7 +34,11 @@ const formSchema = z.object({
   event: z.string().min(1, { message: 'Please select an event.' }),
 });
 
-export default function RegistrationSection() {
+type EventRegistrationFormProps = {
+    eventName: string;
+}
+
+export default function EventRegistrationForm({ eventName }: EventRegistrationFormProps) {
     const { toast } = useToast()
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -45,31 +49,28 @@ export default function RegistrationSection() {
       department: '',
       email: '',
       phone: '',
-      event: '',
+      event: eventName,
     },
   });
+
+  React.useEffect(() => {
+    form.reset({ event: eventName, name: '', college: '', department: '', email: '', phone: '' });
+  }, [eventName, form]);
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
     toast({
         title: "Registration Submitted!",
-        description: "We've received your registration for CONVERGENCE 2k26. See you there!",
+        description: `We've received your registration for ${values.event}. See you there!`,
     })
     form.reset();
   }
 
   return (
-    <SectionWrapper id="register">
-      <div className="space-y-4 animate-fade-in-up" style={{ animationFillMode: 'backwards' }}>
-        <SectionTitle>Register for CONVERGENCE</SectionTitle>
-        <SectionDescription>
-          Secure your spot at CONVERGENCE 2k26! Fill out the form below to register for the events.
-        </SectionDescription>
-      </div>
-      <div className="mt-12 flex justify-center">
-        <Card className="w-full max-w-2xl bg-card/30 border border-border/20 backdrop-blur-sm">
+    <div id="register" className="pt-12">
+        <Card className="w-full bg-card/30 border border-border/20 backdrop-blur-sm animate-fade-in-up">
           <CardHeader>
-            <CardTitle className="font-headline">CONVERGENCE 2k26 Registration</CardTitle>
+            <CardTitle className="font-headline text-2xl">Register for this Event</CardTitle>
           </CardHeader>
           <CardContent>
             <Form {...form}>
@@ -149,7 +150,7 @@ export default function RegistrationSection() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Select Event</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <Select onValueChange={field.onChange} value={field.value}>
                         <FormControl>
                           <SelectTrigger>
                             <SelectValue placeholder="Choose an event to participate in" />
@@ -175,6 +176,5 @@ export default function RegistrationSection() {
           </CardContent>
         </Card>
       </div>
-    </SectionWrapper>
   );
 }

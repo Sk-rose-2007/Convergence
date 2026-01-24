@@ -6,7 +6,6 @@ export const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Events', href: '#events' },
   { name: 'Schedule', href: '#schedule' },
-  { name: 'Register', href: '#register' },
   { name: 'Coordinators', href: '#coordinators' },
 ];
 
@@ -16,6 +15,8 @@ export type Event = {
   description: string;
   rules: string[];
   icon: LucideIcon;
+  imageId: string;
+  coordinators: string[];
 };
 
 export const technicalEvents: Event[] = [
@@ -25,6 +26,8 @@ export const technicalEvents: Event[] = [
     description: 'Showcase your research and insights on cutting-edge topics.',
     rules: ['Team of 1 or 2 members.', 'Presentation time is 8+2 minutes.', 'Domain: AI, ML, IoT, Cloud, etc.'],
     icon: FileText,
+    imageId: 'event-paper-presentation',
+    coordinators: ['coordinator-5'],
   },
   {
     title: 'Project Presentation',
@@ -32,6 +35,8 @@ export const technicalEvents: Event[] = [
     description: 'Exhibit your innovative projects and working models.',
     rules: ['Team of max 3 members.', 'Abstract submission is mandatory.', 'Hardware or software projects allowed.'],
     icon: Lightbulb,
+    imageId: 'event-project-presentation',
+    coordinators: ['coordinator-6'],
   },
   {
     title: 'Code Rush',
@@ -39,6 +44,8 @@ export const technicalEvents: Event[] = [
     description: 'A coding marathon to solve real-world problems.',
     rules: ['Individual participation.', '2 rounds of coding challenges.', 'Platform: HackerRank.'],
     icon: Laptop,
+    imageId: 'event-code-rush',
+    coordinators: ['coordinator-5'],
   },
   {
     title: 'Debugging',
@@ -46,6 +53,8 @@ export const technicalEvents: Event[] = [
     description: 'Test your algorithmic and problem-solving skills.',
     rules: ['Individual participation.', 'Find and fix bugs in C/C++/Java/Python.', 'Fastest debugger wins.'],
     icon: Bug,
+    imageId: 'event-debugging',
+    coordinators: ['coordinator-6'],
   },
   {
     title: 'Web Design',
@@ -53,6 +62,8 @@ export const technicalEvents: Event[] = [
     description: 'Find and fix the bugs in the given code snippets.',
     rules: ['Team of 2 members.', 'Create a responsive webpage for a given theme.', 'Duration: 3 hours.'],
     icon: Code,
+    imageId: 'event-web-design',
+    coordinators: ['coordinator-5'],
   },
 ];
 
@@ -63,6 +74,8 @@ export const nonTechnicalEvents: Event[] = [
     description: 'Solve riddles to find the treasure.',
     rules: ['Team of 2.', 'Solve riddles to find the treasure.', 'Campus-wide event.'],
     icon: Search,
+    imageId: 'event-treasure-hunt',
+    coordinators: ['coordinator-3'],
   },
   {
     title: 'Ad Zap',
@@ -70,6 +83,8 @@ export const nonTechnicalEvents: Event[] = [
     description: 'Create a humorous ad for a given product.',
     rules: ['Team of 2-4 members.', 'Props will be provided.', 'A classic fun event.'],
     icon: Lightbulb,
+    imageId: 'event-ad-zap',
+    coordinators: ['coordinator-4'],
   },
   {
     title: 'Connexion',
@@ -77,6 +92,8 @@ export const nonTechnicalEvents: Event[] = [
     description: 'Find the connection between images/words.',
     rules: ['Team of 2.', 'Pounce and bounce rules apply.', 'Audience participation is encouraged.'],
     icon: Users,
+    imageId: 'event-connexion',
+    coordinators: ['coordinator-3'],
   },
   {
     title: 'Gaming',
@@ -84,6 +101,8 @@ export const nonTechnicalEvents: Event[] = [
     description: 'Compete in popular esports titles like Valorant and FIFA.',
     rules: ['Solo and team events.', 'Games: BGMI, Free Fire, Valorant.', 'Pre-registration required.'],
     icon: Gamepad2,
+    imageId: 'event-gaming',
+    coordinators: ['coordinator-4'],
   },
   {
     title: 'Photography',
@@ -91,6 +110,8 @@ export const nonTechnicalEvents: Event[] = [
     description: 'Capture the essence and moments of CONVERGENCE.',
     rules: ['Individual participation.', 'Theme will be revealed on the day.', 'Mobile and DSLR allowed.'],
     icon: Camera,
+    imageId: 'event-photography',
+    coordinators: ['coordinator-3'],
   },
 ];
 
@@ -134,6 +155,20 @@ export const coordinators = [
     role: 'Joint Secretary',
     phone: '+1 (456) 789-0123',
     email: 'swetha.s@example.com',
+  },
+  {
+    id: 'coordinator-5',
+    name: 'Rajesh Kumar',
+    role: 'Tech Event Coordinator',
+    phone: '+1 (555) 111-2222',
+    email: 'rajesh.k@example.com',
+  },
+  {
+    id: 'coordinator-6',
+    name: 'Priya Sharma',
+    role: 'Tech Event Coordinator',
+    phone: '+1 (555) 333-4444',
+    email: 'priya.s@example.com',
   },
 ];
 
