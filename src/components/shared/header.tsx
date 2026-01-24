@@ -10,8 +10,10 @@ import { navLinks } from '@/lib/content';
 
 export default function Header() {
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
+    setIsClient(true)
     const handleScroll = () => {
       setHasScrolled(window.scrollY > 20);
     };
@@ -70,6 +72,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         <div className="md:hidden">
+        {isClient && (
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
@@ -100,6 +103,7 @@ export default function Header() {
               </div>
             </SheetContent>
           </Sheet>
+          )}
         </div>
       </div>
     </header>
