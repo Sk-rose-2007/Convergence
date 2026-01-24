@@ -37,8 +37,8 @@ export default function CoordinatorsSection() {
                           />
                       )}
                   </div>
-                  <h3 className="text-lg font-bold font-headline">{coordinator.name}</h3>
-                  <p className="text-sm text-primary">{coordinator.role}</p>
+                  <h3 className="text-lg font-bold font-headline break-words">{coordinator.name}</h3>
+                  <p className="text-sm text-primary break-words">{coordinator.role}</p>
                   <div className="mt-4 space-y-2 text-sm text-muted-foreground">
                       <div className="flex items-center justify-center gap-2">
                           <Phone className="h-4 w-4" />

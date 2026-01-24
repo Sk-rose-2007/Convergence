@@ -11,10 +11,12 @@ export default function EventCard({ icon: Icon, title, description, slug }: Even
           <div className="rounded-lg bg-primary/10 p-3">
             <Icon className="h-6 w-6 text-primary" />
           </div>
-          <CardTitle className="font-headline text-xl">{title}</CardTitle>
+          <div className="flex-1 min-w-0">
+            <CardTitle className="font-headline text-xl break-words">{title}</CardTitle>
+          </div>
         </CardHeader>
         <CardContent className="flex-grow flex flex-col justify-between">
-          <p className="text-muted-foreground">{description}</p>
+          <p className="text-muted-foreground break-words">{description}</p>
           <div className="mt-4 flex items-center justify-end text-sm font-semibold text-accent transition-colors group-hover:text-primary">
             View Details
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

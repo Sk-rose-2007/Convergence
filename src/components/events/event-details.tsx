@@ -49,16 +49,16 @@ export default function EventDetails({ event }: EventDetailsProps) {
               <div className="rounded-lg bg-primary/10 p-3 mt-1.5">
                 <Icon className="h-8 w-8 text-primary" />
               </div>
-              <div className="flex-1">
-                <CardTitle className="font-headline text-3xl md:text-4xl">{event.title}</CardTitle>
-                <p className="mt-2 text-lg text-muted-foreground">{event.description}</p>
+              <div className="flex-1 min-w-0">
+                <CardTitle className="font-headline text-3xl md:text-4xl break-words">{event.title}</CardTitle>
+                <p className="mt-2 text-lg text-muted-foreground break-words">{event.description}</p>
               </div>
             </div>
           </CardHeader>
           <CardContent className="space-y-8 pt-4">
             <div>
               <h3 className="text-2xl font-bold font-headline mb-4">About the Event</h3>
-              <div className="space-y-4 text-muted-foreground">
+              <div className="space-y-4 text-muted-foreground break-words">
                 {event.detailedDescription.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
@@ -67,7 +67,7 @@ export default function EventDetails({ event }: EventDetailsProps) {
 
             <div>
               <h3 className="text-2xl font-bold font-headline mb-4">Rules & Guidelines</h3>
-              <ul className="list-disc space-y-2 pl-5 text-muted-foreground">
+              <ul className="list-disc space-y-2 pl-5 text-muted-foreground break-words">
                 {event.rules.map((rule, index) => (
                   <li key={index}>{rule}</li>
                 ))}
@@ -93,9 +93,9 @@ export default function EventDetails({ event }: EventDetailsProps) {
                                 className="w-16 h-16 rounded-full object-cover border-2 border-primary"
                              />
                           )}
-                          <div className='flex-1'>
-                            <h4 className="font-bold text-lg font-headline">{coordinator.name}</h4>
-                            <p className="text-sm text-primary">{coordinator.role}</p>
+                          <div className='flex-1 min-w-0'>
+                            <h4 className="font-bold text-lg font-headline break-words">{coordinator.name}</h4>
+                            <p className="text-sm text-primary break-words">{coordinator.role}</p>
                              <div className="mt-2 space-y-1 text-xs text-muted-foreground">
                                 <div className="flex items-center gap-2">
                                     <Phone className="h-3 w-3" />
