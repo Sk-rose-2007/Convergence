@@ -4,13 +4,14 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { navLinks } from '@/lib/content';
 
 export default function Header() {
   const [hasScrolled, setHasScrolled] = useState(false);
-  const [isClient, setIsClient] = useState(false)
+  const [isClient, setIsClient] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     setIsClient(true)
@@ -27,12 +28,13 @@ export default function Header() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMobileMenuOpen(false);
   };
 
   const NavLink = ({ href, children, isMobile = false }: { href: string; children: React.ReactNode, isMobile?: boolean }) => {
     const sectionId = href.substring(1);
     
-    const linkComponent = (
+    return (
         <Link
             href={href}
             onClick={(e) => scrollTo(sectionId, e)}
@@ -44,8 +46,6 @@ export default function Header() {
             {children}
         </Link>
     );
-
-    return isMobile ? <SheetClose asChild>{linkComponent}</SheetClose> : linkComponent;
   };
 
   return (
@@ -73,7 +73,7 @@ export default function Header() {
         {/* Mobile Navigation */}
         <div className="md:hidden">
         {isClient && (
-          <Sheet>
+          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
@@ -87,15 +87,13 @@ export default function Header() {
                 </SheetHeader>
                 <nav className="flex-1 flex flex-col gap-2 p-4">
                   {navLinks.map((link) => (
-                    <NavLink key={link.name} href={link.href} isMobile>{link.name}</NavLink>
+                    <NavLink key={link.name} href={link.href} isMobile={true}>{link.name}</NavLink>
                   ))}
                 </nav>
                 <div className="p-4 border-t">
-                    <SheetClose asChild>
-                        <Button asChild className="w-full" onClick={(e) => scrollTo('events', e as any)}>
-                            <Link href="#events">Explore Events</Link>
-                        </Button>
-                    </SheetClose>
+                    <Button asChild className="w-full" onClick={(e) => scrollTo('events', e as any)}>
+                        <Link href="#events">Explore Events</Link>
+                    </Button>
                 </div>
               </div>
             </SheetContent>
