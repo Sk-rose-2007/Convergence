@@ -12,7 +12,7 @@ export default function CoordinatorsSection() {
 
   return (
     <SectionWrapper id="coordinators" className="bg-card">
-      <div className="space-y-4 animate-fade-in-up" style={{ animationFillMode: 'backwards' }}>
+      <div className="space-y-4 animate-fade-in-up">
         <SectionTitle>Our Student Coordinators</SectionTitle>
         <SectionDescription>
           Meet the dedicated student coordinators of CONVERGENCE 2k24.
@@ -22,7 +22,7 @@ export default function CoordinatorsSection() {
         {coordinators.map((coordinator, index) => {
           const placeholder = getImage(coordinator.id);
           return (
-            <div key={coordinator.name} className="animate-fade-in-up" style={{ animationDelay: `${0.1 * (index + 1)}s`, animationFillMode: 'backwards' }}>
+            <div key={coordinator.name} className="animate-fade-in-up">
               <Card className="overflow-hidden text-center bg-card/30 border border-border/20 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:shadow-primary/20 hover:shadow-2xl hover:-translate-y-2">
                 <CardContent className="p-6">
                   <div className="mb-4">

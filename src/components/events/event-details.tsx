@@ -42,7 +42,7 @@ export default function EventDetails({ event }: EventDetailsProps) {
           </div>
         )}
 
-        <Card className="bg-card/30 border border-border/20 backdrop-blur-sm animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'backwards'}}>
+        <Card className="bg-card/30 border border-border/20 backdrop-blur-sm animate-fade-in-up">
           <CardHeader>
             <div className="flex items-start gap-4">
               <div className="rounded-lg bg-primary/10 p-3 mt-1.5">
@@ -116,7 +116,7 @@ export default function EventDetails({ event }: EventDetailsProps) {
           </CardContent>
         </Card>
 
-        <div id="register" className="mt-12 text-center animate-fade-in-up" style={{ animationDelay: '0.4s', animationFillMode: 'backwards'}}>
+        <div id="register" className="mt-12 text-center animate-fade-in-up">
             <Button asChild size="lg" className="rounded-full text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:scale-105 active:scale-100 bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] animate-gradient-pan">
                 <Link href="#" target="_blank" rel="noopener noreferrer">
                     <Ticket className="h-5 w-5" />

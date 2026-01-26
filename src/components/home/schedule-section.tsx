@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 export default function ScheduleSection() {
   return (
     <SectionWrapper id="schedule" className="bg-background">
-      <div className="space-y-4 animate-fade-in-up" style={{ animationFillMode: 'backwards' }}>
+      <div className="space-y-4 animate-fade-in-up">
         <SectionTitle>Event Schedule</SectionTitle>
         <SectionDescription>
           Plan your day at CONVERGENCE 2k26. Here’s the timeline of all the events and activities we have lined up for you on February 18th.

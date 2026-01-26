@@ -6,7 +6,7 @@ import { technicalEvents, nonTechnicalEvents } from '@/lib/content';
 export default function EventsSection() {
   return (
     <SectionWrapper id="events">
-      <div className="space-y-4 text-center animate-fade-in-up" style={{ animationFillMode: 'backwards' }}>
+      <div className="space-y-4 text-center animate-fade-in-up">
         <SectionTitle>Explore Our Events</SectionTitle>
         <SectionDescription>
           From intense coding battles to creative challenges, we have a diverse range of events for everyone. Choose your arena and get ready to compete at CONVERGENCE 2k26!
@@ -21,7 +21,7 @@ export default function EventsSection() {
           <TabsContent value="technical" className="mt-8">
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {technicalEvents.map((event, index) => (
-                <div key={event.title} className="animate-fade-in-up" style={{ animationDelay: `${0.1 * (index + 1)}s`, animationFillMode: 'backwards' }}>
+                <div key={event.title} className="animate-fade-in-up">
                   <EventCard {...event} />
                 </div>
               ))}
@@ -30,7 +30,7 @@ export default function EventsSection() {
           <TabsContent value="non-technical" className="mt-8">
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {nonTechnicalEvents.map((event, index) => (
-                <div key={event.title} className="animate-fade-in-up" style={{ animationDelay: `${0.1 * (index + 1)}s`, animationFillMode: 'backwards' }}>
+                <div key={event.title} className="animate-fade-in-up">
                   <EventCard {...event} />
                 </div>
               ))}
