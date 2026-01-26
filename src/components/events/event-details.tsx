@@ -7,7 +7,6 @@ import { ArrowLeft, Phone, Mail } from 'lucide-react';
 import type { Event } from '@/lib/content';
 import { coordinators as allCoordinators } from '@/lib/content';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import EventRegistrationForm from './event-registration-form';
 
 type EventDetailsProps = {
   event: Event;
@@ -117,7 +116,13 @@ export default function EventDetails({ event }: EventDetailsProps) {
           </CardContent>
         </Card>
 
-        <EventRegistrationForm eventName={event.title} />
+        <div id="register" className="mt-12 text-center animate-fade-in-up" style={{ animationDelay: '0.4s', animationFillMode: 'backwards'}}>
+            <Button asChild size="lg" className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:scale-105 active:scale-100">
+                <Link href="#" target="_blank" rel="noopener noreferrer">
+                    Click to Register
+                </Link>
+            </Button>
+        </div>
 
       </div>
     </SectionWrapper>
