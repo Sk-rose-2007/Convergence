@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -12,6 +12,7 @@ export default function Header() {
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isClient, setIsClient] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     setIsClient(true)
@@ -26,7 +27,14 @@ export default function Header() {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+        const headerHeight = headerRef.current?.offsetHeight || 80;
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerHeight;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
     }
     setIsMobileMenuOpen(false);
   };
@@ -50,6 +58,7 @@ export default function Header() {
 
   return (
     <header
+      ref={headerRef}
       className={cn(
         'sticky top-0 z-50 flex h-20 items-center transition-all duration-300',
         hasScrolled ? 'bg-background/70 backdrop-blur-lg border-b border-border/20' : 'bg-transparent'

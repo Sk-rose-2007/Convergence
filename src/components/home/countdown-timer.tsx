@@ -9,8 +9,8 @@ type TimeUnitProps = {
 
 function TimeUnit({ value, label }: TimeUnitProps) {
   return (
-    <div className="flex flex-col items-center justify-center rounded-lg bg-card/50 p-4 w-20 h-20 md:w-24 md:h-24 backdrop-blur-sm border border-border/20">
-      <span className="text-3xl md:text-4xl font-bold font-mono text-primary">{String(value).padStart(2, '0')}</span>
+    <div className="flex flex-col items-center justify-center rounded-lg bg-card/50 p-2 w-16 h-16 md:w-24 md:h-24 backdrop-blur-sm border border-border/20">
+      <span className="text-2xl md:text-4xl font-bold font-mono text-primary">{String(value).padStart(2, '0')}</span>
       <span className="text-xs md:text-sm text-muted-foreground uppercase tracking-widest">{label}</span>
     </div>
   );
