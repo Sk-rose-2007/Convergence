@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { navLinks } from '@/lib/content';
 
@@ -82,12 +82,12 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="right">
               <div className="flex flex-col h-full -mx-6 -my-6">
-                <div className="flex justify-between items-center p-4 border-b">
-                    <span className="text-lg font-bold font-headline">Menu</span>
+                <SheetHeader className="flex-row justify-between items-center p-4 border-b">
+                    <SheetTitle className="text-lg font-bold font-headline">Menu</SheetTitle>
                     <SheetClose asChild>
                         <Button variant="ghost" size="icon"><X className="h-6 w-6" /></Button>
                     </SheetClose>
-                </div>
+                </SheetHeader>
                 <nav className="flex-1 flex flex-col gap-2 p-4">
                   {navLinks.map((link) => (
                     <NavLink key={link.name} href={link.href} isMobile>{link.name}</NavLink>
