@@ -40,7 +40,7 @@ export default function Header() {
             onClick={(e) => scrollTo(sectionId, e)}
             className={cn(
                 "transition-colors hover:text-primary",
-                isMobile && "block w-full p-4 text-lg"
+                isMobile && "block w-full p-4 text-lg rounded-md hover:bg-muted"
             )}
         >
             {children}
