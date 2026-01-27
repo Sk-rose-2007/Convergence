@@ -1,17 +1,37 @@
-import Link from 'next/link';
-import { socialLinks } from '@/lib/content';
+import Link from "next/link";
+import Image from "next/image";
+import logo from "@/assests/images/logo.jpeg";
+import { socialLinks } from "@/lib/content";
 
 export default function Footer() {
   return (
     <footer className="bg-card/50 border-t border-border/20">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row md:px-6">
-        <div className="text-center sm:text-left">
+        <div className="flex items-center gap-3 text-center sm:text-left">
+          <Image
+            src={logo}
+            alt="Nehru Institute of Technology Logo"
+            width={40}
+            height={40}
+          />
+          <div>
             <p className="text-sm font-medium">Nehru Institute of Technology</p>
-            <p className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} CONVERGENCE 2k26. All rights reserved.</p>
+            <p className="text-xs text-muted-foreground">
+              &copy; {new Date().getFullYear()} CONVERGENCE 2k26. All rights
+              reserved.
+            </p>
+          </div>
         </div>
+
         <div className="flex items-center gap-4">
           {socialLinks.map((social) => (
-            <Link key={social.name} href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name}>
+            <Link
+              key={social.name}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.name}
+            >
               <social.icon className="h-5 w-5 text-muted-foreground transition-colors hover:text-primary" />
             </Link>
           ))}
