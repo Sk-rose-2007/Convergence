@@ -69,3 +69,6 @@
     @apply bg-clip-text text-transparent;
   }
 }
+nextjs-portal {
+  display: none !important;
+}
