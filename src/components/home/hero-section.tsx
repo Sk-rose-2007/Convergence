@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import CountdownTimer from './countdown-timer';
-import deptlogo from "@/assests/images/dept.jpeg";
+import deptlogo from "@/assests/images/dept.jpg";
 
 export default function HeroSection() {
   const eventDate = new Date('2026-02-18T09:00:00');
@@ -20,8 +20,10 @@ export default function HeroSection() {
             alt="AI & ML Department Logo"
             width={140}
             height={140}
-            className="rounded-full shadow-lg shadow-primary/30"
           />
+          <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-6xl md:text-3xl lg:text-3xl bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] animate-gradient-pan text-gradient">
+            Department of artificial intellegence proudly present
+          </h1>  
 
           <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] animate-gradient-pan text-gradient">
             CONVERGENCE 2k26

@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
+import logo from "@/assests/images/nit.png";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { navLinks } from '@/lib/content';
@@ -66,7 +68,14 @@ export default function Header() {
     >
       <div className="container mx-auto flex items-center justify-between px-4 md:px-6">
         <Link href="#home" onClick={(e) => scrollTo('home', e)} className="flex items-center gap-2">
-          <span className="text-xl font-bold font-headline bg-gradient-to-r from-primary to-accent text-gradient">CONVERGENCE</span>
+          <div className="w-6 h-6 rounded-full overflow-hidden shadow-lg shadow-primary/30">
+            <Image
+            src={logo}
+            alt="Nehru Institute of Technology Logo"
+            className="w-full h-full object-cover"
+            />
+          </div>
+<span className="text-l font-bold font-headline bg-gradient-to-r from-primary to-accent text-gradient">Nehru Institue of Technology</span>
         </Link>
 
         {/* Desktop Navigation */}
