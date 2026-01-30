@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, Phone, Mail, Ticket } from 'lucide-react';
+import { ArrowLeft, Phone, Mail } from 'lucide-react';
 import type { Event } from '@/lib/content';
 import { coordinators as allCoordinators } from '@/lib/content';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -115,15 +115,6 @@ export default function EventDetails({ event }: EventDetailsProps) {
             )}
           </CardContent>
         </Card>
-
-        <div id="register" className="mt-12 text-center animate-fade-in-up">
-            <Button asChild size="lg" className="rounded-full text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:scale-105 active:scale-100 bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] animate-gradient-pan">
-                <Link href="#" target="_blank" rel="noopener noreferrer">
-                    <Ticket className="h-5 w-5" />
-                    Click to Register
-                </Link>
-            </Button>
-        </div>
 
       </div>
     </SectionWrapper>
