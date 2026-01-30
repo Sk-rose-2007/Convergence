@@ -105,7 +105,7 @@ to: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
-        'gradient-pan': 'gradient-pan 10s ease infinite',
+        'gradient-pan': 'gradient-pan 4s ease infinite',
       },
     },
   },
