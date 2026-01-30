@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Jost', 'sans-serif'],
-        headline: ['Orbitron', 'sans-serif'],
+        body: ['PT Sans', 'sans-serif'],
+        headline: ['Exo 2', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
