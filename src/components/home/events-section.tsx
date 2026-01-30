@@ -14,14 +14,6 @@ export default function EventsSection() {
         <SectionDescription>
           From intense coding battles to creative challenges, we have a diverse range of events for everyone. Choose your arena and get ready to compete at CONVERGENCE 2k26!
         </SectionDescription>
-        <div className="pt-6">
-            <Button asChild size="lg" className="rounded-full text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:scale-105 active:scale-100 bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] animate-gradient-pan">
-                <Link href="#" target="_blank" rel="noopener noreferrer">
-                    <Ticket className="h-5 w-5" />
-                    Register for Events
-                </Link>
-            </Button>
-        </div>
       </div>
       <div className="mt-12">
         <Tabs defaultValue="technical" className="w-full">
@@ -48,6 +40,14 @@ export default function EventsSection() {
             </div>
           </TabsContent>
         </Tabs>
+      </div>
+      <div className="mt-12 text-center animate-fade-in-up">
+        <Button asChild size="lg" className="rounded-full text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:scale-105 active:scale-100 bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] animate-gradient-pan">
+            <Link href="#" target="_blank" rel="noopener noreferrer">
+                <Ticket className="h-5 w-5" />
+                Register for Events
+            </Link>
+        </Button>
       </div>
     </SectionWrapper>
   );
