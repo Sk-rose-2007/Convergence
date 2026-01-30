@@ -75,7 +75,7 @@ export default function Header() {
             className="w-full h-full object-cover"
             />
           </div>
-<span className="text-l font-bold font-headline bg-gradient-to-r from-primary to-accent text-gradient">Nehru Institue of Technology</span>
+<span className="text-lg font-bold font-headline bg-gradient-to-r from-primary to-accent text-gradient">Nehru Institue of Technology</span>
         </Link>
 
         {/* Desktop Navigation */}
