@@ -19,7 +19,7 @@ export default function EventsSection() {
           <h3 className="text-2xl font-bold font-headline mb-8 text-center text-primary">
             Technical Events
           </h3>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 justify-center">
+          <div className="grid gap-6 md:grid-cols-2 justify-center">
             {technicalEvents.map((event) => (
               <div key={event.title} className="animate-fade-in-up">
                 <EventCard {...event} />
@@ -31,7 +31,7 @@ export default function EventsSection() {
           <h3 className="text-2xl font-bold font-headline mb-8 text-center text-primary">
             Non-Technical Events
           </h3>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 justify-center">
+          <div className="grid gap-6 justify-center lg:max-w-lg mx-auto">
             {nonTechnicalEvents.map((event) => (
               <div key={event.title} className="animate-fade-in-up">
                 <EventCard {...event} />
