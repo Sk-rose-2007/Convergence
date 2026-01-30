@@ -32,7 +32,7 @@ export const technicalEvents: Event[] = [
     rules: ['Team of 1 or 2 members.', 'Presentation time is 8+2 minutes.', 'Domain: AI, ML, IoT, Cloud, etc.'],
     icon: FileText,
     imageId: 'event-paper-presentation',
-    coordinators: ['coordinator-5'],
+    coordinators: ['coordinator-1'],
   },
   {
     title: 'Debugging',
@@ -45,7 +45,7 @@ export const technicalEvents: Event[] = [
     rules: ['Individual participation.', 'Find and fix bugs in C/C++/Java/Python.', 'Fastest debugger wins.'],
     icon: Bug,
     imageId: 'event-debugging',
-    coordinators: ['coordinator-6'],
+    coordinators: ['coordinator-2'],
   },
 ];
 
@@ -105,20 +105,6 @@ export const coordinators = [
     role: 'Joint Secretary',
     phone: '+1 (456) 789-0123',
     email: 'swetha.s@example.com',
-  },
-  {
-    id: 'coordinator-5',
-    name: 'Rajesh Kumar',
-    role: 'Tech Event Coordinator',
-    phone: '+1 (555) 111-2222',
-    email: 'rajesh.k@example.com',
-  },
-  {
-    id: 'coordinator-6',
-    name: 'Priya Sharma',
-    role: 'Tech Event Coordinator',
-    phone: '+1 (555) 333-4444',
-    email: 'priya.s@example.com',
   },
 ];
 
