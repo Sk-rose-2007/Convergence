@@ -1,5 +1,4 @@
 import { SectionWrapper, SectionTitle, SectionDescription } from '../shared/section-wrapper';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import EventCard from './event-card';
 import { technicalEvents, nonTechnicalEvents } from '@/lib/content';
 import { Button } from '@/components/ui/button';
@@ -15,33 +14,33 @@ export default function EventsSection() {
           From intense coding battles to creative challenges, we have a diverse range of events for everyone. Choose your arena and get ready to compete at CONVERGENCE 2k26!
         </SectionDescription>
       </div>
-      <div className="mt-12">
-        <Tabs defaultValue="technical" className="w-full">
-          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2">
-            <TabsTrigger value="technical">Technical Events</TabsTrigger>
-            <TabsTrigger value="non-technical">Non-Technical Events</TabsTrigger>
-          </TabsList>
-          <TabsContent value="technical" className="mt-8">
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {technicalEvents.map((event, index) => (
-                <div key={event.title} className="animate-fade-in-up">
-                  <EventCard {...event} />
-                </div>
-              ))}
-            </div>
-          </TabsContent>
-          <TabsContent value="non-technical" className="mt-8">
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {nonTechnicalEvents.map((event, index) => (
-                <div key={event.title} className="animate-fade-in-up">
-                  <EventCard {...event} />
-                </div>
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
+      <div className="mt-12 space-y-16">
+        <div>
+          <h3 className="text-2xl font-bold font-headline mb-8 text-center text-primary">
+            Technical Events
+          </h3>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 justify-center">
+            {technicalEvents.map((event) => (
+              <div key={event.title} className="animate-fade-in-up">
+                <EventCard {...event} />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h3 className="text-2xl font-bold font-headline mb-8 text-center text-primary">
+            Non-Technical Events
+          </h3>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 justify-center">
+            {nonTechnicalEvents.map((event) => (
+              <div key={event.title} className="animate-fade-in-up">
+                <EventCard {...event} />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-      <div className="mt-12 text-center animate-fade-in-up">
+      <div className="mt-16 text-center animate-fade-in-up">
         <Button asChild size="lg" className="rounded-full text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:scale-105 hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)] active:scale-100 bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] animate-gradient-pan">
             <Link href="#" target="_blank" rel="noopener noreferrer">
                 <Ticket className="h-5 w-5" />
