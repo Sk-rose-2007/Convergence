@@ -15,7 +15,7 @@ export default function CoordinatorsSection() {
       <div className="space-y-4 animate-fade-in-up">
         <SectionTitle>Our Student Coordinators</SectionTitle>
         <SectionDescription>
-          Meet the dedicated student coordinators of CONVERGENCE 2k24.
+          Meet the dedicated student coordinators of CONVERGENCE 2k26.
         </SectionDescription>
       </div>
       <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -23,7 +23,7 @@ export default function CoordinatorsSection() {
           const placeholder = getImage(coordinator.id);
           return (
             <div key={coordinator.name} className="animate-fade-in-up">
-              <Card className="overflow-hidden text-center bg-card/30 border border-border/20 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:shadow-primary/20 hover:shadow-2xl hover:-translate-y-2">
+              <Card className="overflow-hidden text-center bg-card/30 border border-border/20 backdrop-blur-sm transition-all duration-400 hover:border-primary/50 hover:shadow-primary/20 hover:shadow-2xl hover:-translate-y-2">
                 <CardContent className="p-6">
                   <div className="mb-4">
                       {placeholder && (
