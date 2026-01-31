@@ -49,7 +49,7 @@ export default function EventsSection() {
           className="rounded-full text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:scale-105 hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)] active:scale-100 bg-gradient-to-r from-primary to-accent"
         >
           <Link
-            href="https://docs.google.com/forms/d/e/1FAIpQLSesCQ273xaAhX5y7KCaoESKZ_owb1qZKwEn1Q1-kz549W79Vg/viewform?usp=publish-editor"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSesCQ273xaAhX5y7KCaoESKZ_owb1qZKwEn1Q1-kz549W79Vg/viewform?usp=header"
             target="_blank"
             rel="noopener noreferrer"
           >
