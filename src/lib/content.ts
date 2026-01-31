@@ -1,5 +1,5 @@
 import type { LucideIcon } from 'lucide-react';
-import { FileText, Lightbulb, Laptop, Code, Bug, BrainCircuit, Users, Gamepad2, Camera, Puzzle, Github, Twitter, Linkedin, Search } from 'lucide-react';
+import { FileText, Lightbulb, Laptop, Code, Bug, BrainCircuit, Users, Gamepad2, Camera, Puzzle, Github, Twitter, Linkedin, Search, Instagram } from 'lucide-react';
 
 export const navLinks = [
   { name: 'Home', href: '#home' },
@@ -32,7 +32,7 @@ export const technicalEvents: Event[] = [
     rules: ['Team of 1 or 2 members.', 'Presentation time is 8+2 minutes.', 'Domain: AI, ML, IoT, Cloud, etc.'],
     icon: FileText,
     imageId: 'event-paper-presentation',
-    coordinators: ['coordinator-1'],
+    coordinators: ['coordinator-2'],
   },
   {
     title: 'Debugging',
@@ -45,7 +45,7 @@ export const technicalEvents: Event[] = [
     rules: ['Individual participation.', 'Find and fix bugs in C/C++/Java/Python.', 'Fastest debugger wins.'],
     icon: Bug,
     imageId: 'event-debugging',
-    coordinators: ['coordinator-2'],
+    coordinators: ['coordinator-3'],
   },
 ];
 
@@ -61,7 +61,7 @@ export const nonTechnicalEvents: Event[] = [
     rules: ['Team of 2.', 'Pounce and bounce rules apply.', 'Audience participation is encouraged.'],
     icon: Users,
     imageId: 'event-connexion',
-    coordinators: ['coordinator-3'],
+    coordinators: ['coordinator-4'],
   },
 ];
 
@@ -80,38 +80,46 @@ export const schedule = {
 export const coordinators = [
   {
     id: 'coordinator-1',
-    name: 'Vasanth S',
-    role: 'Secretary',
-    phone: '+1 (123) 456-7890',
-    email: 'vasanth.s@example.com',
+    name: 'Kiruthik Roshan S',
+    role: 'Overall Coordinator',
+    phone: '+91 6381036979',
+    email: 'roshantpms2007@gmail.com',
   },
   {
     id: 'coordinator-2',
-    name: 'Srinath S',
-    role: 'Chairman',
-    phone: '+1 (234) 567-8901',
-    email: 'srinath.s@example.com',
+    name: 'Smrithi S',
+    role: 'Overall Coordinator',
+    phone: '+916383687565',
+    email: 'smrithisasi.26@gmail.com',
   },
   {
     id: 'coordinator-3',
-    name: 'Sandhiya S',
-    role: 'Treasurer',
-    phone: '+1 (345) 678-9012',
-    email: 'sandhiya.s@example.com',
+    name: 'Mohamed Uvaise A',
+    role: 'Event Coordinator',
+    phone: '+91 8148183593',
+    email: 'mohameduvaise35@gmail.com',
   },
   {
     id: 'coordinator-4',
-    name: 'Swetha S',
-    role: 'Joint Secretary',
-    phone: '+1 (456) 789-0123',
-    email: 'swetha.s@example.com',
+    name: 'Kabilesh R',
+    role: 'Event Organizer',
+    phone: '+91 8148287830',
+    email: 'kabileshmac@gmail.com',
   },
 ];
 
 export const socialLinks = [
-    { name: 'Github', icon: Github, url: '#' },
-    { name: 'Twitter', icon: Twitter, url: '#' },
-    { name: 'Linkedin', icon: Linkedin, url: '#' },
-]
+  { name: "Github", icon: Github, url: "#" },
+  {
+    name: "Instagram",
+    icon: Instagram,
+    url: "https://www.instagram.com/nit_aiml._.24?igsh=MTQ5YTZ0am1rNHlxYg==",
+  },
+  {
+    name: "Linkedin",
+    icon: Linkedin,
+    url: "https://www.linkedin.com/school/nehru-institute-of-technology/",
+  },
+];
 
 export const allEvents = [...technicalEvents, ...nonTechnicalEvents];
