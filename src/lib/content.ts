@@ -109,7 +109,7 @@ export const coordinators = [
 ];
 
 export const socialLinks = [
-  { name: "Github", icon: Github, url: "#" },
+  { name: "Github", icon: Github, url: "https://github.com/AIML-INCUBATION" },
   {
     name: "Instagram",
     icon: Instagram,
