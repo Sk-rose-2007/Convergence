@@ -1,4 +1,5 @@
-#Convergence
+#CONVERGENCE
+
 💻 A Technical Symposium Website
 
 🔗 Live Demo: https://convergence-one.vercel.app
